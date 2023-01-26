@@ -153,7 +153,7 @@ print(myset1)
 
 myset2 = set("Hello")
 print(myset2)
-myset2.add(1)
+# myset2.add(1)
 myset2.add('s')
 myset2.add(True)  # true treated as 1
 print(myset2)
@@ -189,10 +189,12 @@ print(setA)
 setA = {1, 2, 3, 4, 5, 6}
 setB = {1, 2, 3}
 print(setA.issubset(setB))  # returns false bcz setA is not subset of setB
+print(setB.issubset(setA))  # returns True
 print(setA.issuperset(setB))
 setC = {7, 8}
 print(setA.isdisjoint(setC))  # no common elements
 
+# copying sets
 setD = setC
 setD.add(10)
 print(setC)
@@ -208,7 +210,7 @@ print(setC)
 print(setF)
 
 
-# frozen sets  # you can change and update creations
+# frozen sets  # Immutable version of set  # you can't change and update creations
 fset1= frozenset([1, 2, 3, 4])
 print(fset1)
 # fset1.add(50)  # results an error
